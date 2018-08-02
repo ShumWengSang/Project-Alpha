@@ -54,7 +54,6 @@ void MVC_Model::Draw()
 	{
 		obj->Draw();
 	}
-	
 }
 
 

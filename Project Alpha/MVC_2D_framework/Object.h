@@ -38,15 +38,12 @@ private:
 	Vector3D vel;
 	Vector3D pos;
 	Vector3D color;
-	Vector3D scale;
+	static Vector3D scale;
 public:
 	Circle() {}
 	~Circle() {}
 
-	void Draw()
-	{
-		basicShape::drawSphere(5.f);
-	}
+	void Draw();
 };
 
 template <class T>
