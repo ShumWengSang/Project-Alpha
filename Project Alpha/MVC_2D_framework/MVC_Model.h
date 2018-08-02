@@ -10,6 +10,9 @@
 #define __VECTOR_H__
 #endif
 
+#pragma once
+#include "Object.h"
+
 class MVCTime;
 
 class MVC_Model
@@ -25,20 +28,14 @@ public:
 	float m_worldSizeX;
 	float m_worldSizeY;
 
-	float m_testX;
-	float m_testY;
-	float m_moveX;
-	float m_moveY;
-
 	MVCTime* m_timer;
 
 	//Draw the model
 	void Draw();
-	
-	//Handle Input
-	void HandleInput();
 
 private: 
+	std::vector<Object*> Objects;
+	ObjectPool<Circle> CirclePool;
 };
 
 #endif

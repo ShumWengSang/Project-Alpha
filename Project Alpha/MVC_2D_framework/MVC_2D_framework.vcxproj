@@ -88,6 +88,7 @@
     <ClCompile Include="MVC_Model.cpp" />
     <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="MVCtime.cpp" />
+    <ClCompile Include="Object.cpp" />
     <ClCompile Include="texture.cpp" />
     <ClCompile Include="MVC_View.cpp" />
     <ClCompile Include="View_misc.cpp" />
@@ -99,6 +100,7 @@
     <ClInclude Include="MVC_Model.h" />
     <ClInclude Include="Mouse.h" />
     <ClInclude Include="MVCtime.h" />
+    <ClInclude Include="Object.h" />
     <ClInclude Include="texture.h" />
     <ClInclude Include="vector3D.h" />
     <ClInclude Include="MVC_View.h" />
