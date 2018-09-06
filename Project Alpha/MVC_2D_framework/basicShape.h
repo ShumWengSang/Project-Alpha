@@ -13,6 +13,8 @@ namespace basicShape
 	float GetY(float phi,float radius);
 	float GetZ(float phi,float theta,float radius);
 	void drawSphere(float radius);
+	void drawCircleOutline(float cx, float cy, float r, int num_segments);
+	void drawCircleSolid(float x, float y, float radius);
 
 	//Cylinder
 	float GetCX(float theta,float radius);

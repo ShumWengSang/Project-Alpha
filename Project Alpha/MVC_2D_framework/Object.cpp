@@ -34,7 +34,7 @@ void Object::SetActive(bool active)
 void Circle::Draw()
 {
 	glScalef(scale.m_x, scale.m_y, scale.m_z);
-	basicShape::drawSphere(5.f);
+	basicShape::drawCircleSolid(0, 0, 1);
 }
 
 Vector3D Circle::scale = Vector3D(50, 50, 50);
