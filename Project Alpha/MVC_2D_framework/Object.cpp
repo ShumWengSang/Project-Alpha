@@ -31,10 +31,23 @@ void Object::SetActive(bool active)
 	b_active = active;
 }
 
-void Circle::Draw()
+Vector3D Circle::GetPos()
 {
-	glScalef(scale.m_x, scale.m_y, scale.m_z);
-	basicShape::drawCircleSolid(0, 0, 1);
+	return this->pos;
 }
 
-Vector3D Circle::scale = Vector3D(50, 50, 50);
+void Circle::SetPos(Vector3D newPos)
+{
+	pos = newPos;
+}
+
+void Circle::Draw()
+{
+	glPushMatrix();
+	glTranslatef(pos.m_x, pos.m_y, pos.m_z);
+	glScalef(scale.m_x, scale.m_y, scale.m_z);
+	basicShape::drawCircleSolid(0, 0, 1);
+	glPopMatrix();
+}
+
+Vector3D Circle::scale = Vector3D(1, 1, 1);

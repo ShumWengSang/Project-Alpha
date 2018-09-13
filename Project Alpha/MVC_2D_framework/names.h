@@ -1,0 +1,2 @@
+#pragma once
+REGISTER_ENUM(OBJECT_CIRCLE)

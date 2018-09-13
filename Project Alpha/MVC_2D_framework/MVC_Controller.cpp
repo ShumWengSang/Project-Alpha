@@ -133,7 +133,7 @@ bool MVC_Controller::ProcessInput(void)
 	
 	ProcKeyboard();
 	
-	ProcMouse();
+	//ProcMouse();
 	
 	return true;
 }
@@ -143,22 +143,22 @@ void MVC_Controller::ProcMouse()
 	int w;
 	int h;
 	m_theView->GetSize(&w,&h);
-	if(m_theView->m_MouseInfo.m_LButtonDown)
+	if(m_theModel->m_MouseInfo.m_LButtonDown)
 	{
-		m_theView->m_MouseInfo.m_LButtonDown=false;
+		m_theModel->m_MouseInfo.m_LButtonDown=false;
 	}
-	else if(m_theView->m_MouseInfo.m_LButtonUp)
+	else if(m_theModel->m_MouseInfo.m_LButtonUp)
 	{
-		m_theView->m_MouseInfo.m_LButtonUp=false;
+		m_theModel->m_MouseInfo.m_LButtonUp=false;
 	}
 
-	if(m_theView->m_MouseInfo.m_RButtonDown)
+	if(m_theModel->m_MouseInfo.m_RButtonDown)
 	{
-		m_theView->m_MouseInfo.m_RButtonDown=false;
+		m_theModel->m_MouseInfo.m_RButtonDown=false;
 	}
-	else if(m_theView->m_MouseInfo.m_RButtonUp)
+	else if(m_theModel->m_MouseInfo.m_RButtonUp)
 	{
-		m_theView->m_MouseInfo.m_RButtonUp=false;
+		m_theModel->m_MouseInfo.m_RButtonUp=false;
 	}
 }
 

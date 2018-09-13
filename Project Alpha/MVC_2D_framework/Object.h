@@ -23,9 +23,12 @@ public:
 	{
 
 	}
+	virtual void SetPos(Vector3D) {};
+	virtual Vector3D GetPos() { return NULL; };
 private:
 	bool b_active = false;
-
+	Vector3D vel;
+	Vector3D pos;
 private:
 	Object();
 	~Object();
@@ -35,8 +38,6 @@ private:
 class Circle : public Object
 {
 private:
-	Vector3D vel;
-	Vector3D pos;
 	Vector3D color;
 	static Vector3D scale;
 public:
@@ -44,6 +45,8 @@ public:
 	~Circle() {}
 
 	void Draw();
+	void SetPos(Vector3D);
+	Vector3D GetPos();
 };
 
 template <class T>

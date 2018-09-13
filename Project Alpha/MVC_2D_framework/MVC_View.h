@@ -3,10 +3,6 @@
 #pragma comment(lib, "opengl32.lib")
 #pragma comment(lib, "glu32.lib")
 
-#ifndef __MOUSE_H__
-#include "Mouse.h"
-#endif __MOUSE_H__
-
 #ifndef __WINDOWS_H__
 #include <windows.h> // Header File For Windows
 #define __WINDOWS_H__
@@ -35,7 +31,6 @@ public:
 	bool* GetKeyBuffer();
 	void GetSize(int* x,int* y);
 
-	CMouse m_MouseInfo;
 	float m_Swidth,m_Sheight;
 private:
 	GLuint  m_base;                           // Base Display List For The Font Set

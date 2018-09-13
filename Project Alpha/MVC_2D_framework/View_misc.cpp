@@ -356,9 +356,9 @@ LRESULT CALLBACK MVC_View::MsgProc( HWND hWnd, // Handle For This Window
 		}
 	case WM_MOUSEMOVE:
 		{
-			m_MouseInfo.SetMousePos( LOWORD(lParam), HIWORD(lParam) );
-			int diffX = m_MouseInfo.GetDiff_X();
-			int diffY = m_MouseInfo.GetDiff_Y();
+			m_theModel->m_MouseInfo.SetMousePos( LOWORD(lParam), HIWORD(lParam) );
+			int diffX = m_theModel->m_MouseInfo.GetDiff_X();
+			int diffY = m_theModel->m_MouseInfo.GetDiff_Y();
 
 
 			////Checking mouse boundary
@@ -373,33 +373,33 @@ LRESULT CALLBACK MVC_View::MsgProc( HWND hWnd, // Handle For This Window
 			//	SetCursorPos( theMouseInfo.x, theMouseInfo.y );
 			//}
 			return 1; // Jump Back
-		}
+	}
 	case WM_LBUTTONDOWN:
-		{
-			m_MouseInfo.m_LButtonDown=true;
-			m_MouseInfo.m_LButtonHold=true;
-			return 1;
-		}
+	{
+		m_theModel->m_MouseInfo.m_LButtonDown = true;
+		m_theModel->m_MouseInfo.m_LButtonHold = true;
+		return 1;
+	}
 	case WM_LBUTTONUP:
-		{
-			m_MouseInfo.m_LButtonDown=false;
-			m_MouseInfo.m_LButtonHold=false;
-			m_MouseInfo.m_LButtonUp=true;
-			return 1;
-		}
+	{
+		m_theModel->m_MouseInfo.m_LButtonDown = false;
+		m_theModel->m_MouseInfo.m_LButtonHold = false;
+		m_theModel->m_MouseInfo.m_LButtonUp = true;
+		return 1;
+	}
 	case WM_RBUTTONDOWN:
-		{
-			m_MouseInfo.m_RButtonDown=true;
-			m_MouseInfo.m_RButtonHold=true;
-			return 1;
-		}
+	{
+		m_theModel->m_MouseInfo.m_RButtonDown = true;
+		m_theModel->m_MouseInfo.m_RButtonHold = true;
+		return 1;
+	}
 	case WM_RBUTTONUP:
-		{
-			m_MouseInfo.m_RButtonDown=false;
-			m_MouseInfo.m_RButtonHold=false;
-			m_MouseInfo.m_RButtonUp=true;
-			return 1;
-		}
+	{
+		m_theModel->m_MouseInfo.m_RButtonDown = false;
+		m_theModel->m_MouseInfo.m_RButtonHold = false;
+		m_theModel->m_MouseInfo.m_RButtonUp = true;
+		return 1;
+	}
 	}
 
 	// Pass All Unhandled Messages To DefWindowProc

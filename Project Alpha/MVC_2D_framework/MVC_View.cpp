@@ -34,7 +34,6 @@ MVC_View::MVC_View(MVC_Model* theModel)
 {
 	m_theModel = theModel;
 
-	m_MouseInfo.init();
 	m_iWindows_Width = 1; 
 	m_iWindows_Height = 1;
 	m_Sheight=100;

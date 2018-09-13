@@ -12,6 +12,8 @@
 
 #pragma once
 #include "Object.h"
+#include "Mouse.h"
+#include "Factory.h"
 
 class MVCTime;
 
@@ -29,13 +31,16 @@ public:
 	float m_worldSizeY;
 
 	MVCTime* m_timer;
+	CMouse m_MouseInfo;
 
 	//Draw the model
 	void Draw();
-
+	
 private: 
 	std::vector<Object*> Objects;
 	ObjectPool<Circle> CirclePool;
+
+	void MouseProc();
 };
 
 #endif
